@@ -18,13 +18,25 @@ const (
 	Success
 	// Error log type
 	Error
+	// Warning, no color
+	WarningNoColor
+	// Info, no color
+	InfoNoColor
+	// Success, no color
+	SuccessNoColor
+	// Error, no color
+	ErrorNoColor
 )
 
 var logTypeColors = map[LogType]*color.Color{
-	Warning: color.New(color.FgYellow),
-	Info:    color.New(color.FgBlue),
-	Success: color.New(color.FgGreen),
-	Error:   color.New(color.FgRed),
+	Warning:        color.New(color.FgYellow),
+	Info:           color.New(color.FgBlue),
+	Success:        color.New(color.FgGreen),
+	Error:          color.New(color.FgRed),
+	WarningNoColor: color.New(color.Reset),
+	InfoNoColor:    color.New(color.Reset),
+	SuccessNoColor: color.New(color.Reset),
+	ErrorNoColor:   color.New(color.Reset),
 }
 
 var logTypeGlyphs = map[LogType]string{
