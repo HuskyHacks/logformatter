@@ -40,10 +40,14 @@ var logTypeColors = map[LogType]*color.Color{
 }
 
 var logTypeGlyphs = map[LogType]string{
-	Warning: "[!] ",
-	Info:    "[*] ",
-	Success: "[✔] ",
-	Error:   "[✘] ",
+	Warning:        "[!] ",
+	Info:           "[*] ",
+	Success:        "[✔] ",
+	Error:          "[✘] ",
+	WarningNoColor: "[!] ",
+	InfoNoColor:    "[*] ",
+	SuccessNoColor: "[✔] ",
+	ErrorNoColor:   "[✘] ",
 }
 
 // Log prints a formatted log message with color and glyph based on the log type.
